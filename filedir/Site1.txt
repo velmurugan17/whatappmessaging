@@ -1,0 +1,4 @@
+site1,13/06/2022,12:30,Open error
+site1,13/06/2022,12:30,Emergency Pressed
+site1,13/06/2022,12:30,Fire Alarm Activated
+site1,13/06/2022,12:30,Fixed

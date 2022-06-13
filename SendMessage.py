@@ -31,7 +31,6 @@ class MyHandler(FileSystemEventHandler):
 def send_message(driver, filename, group_config):
     with open(filename) as f1:
         data = f1.readlines()
-    # sitename, status = data[0], data[-1]
     sent = False
     for site_details in data:
         for site_name in group_config.keys():
@@ -44,7 +43,7 @@ def send_message(driver, filename, group_config):
                                       group_config[site_name]['group']
                 if (name and status):
                     for group in groups:
-                        inp_xpath_search = '//*[@id="side"]/div[1]/div/label/div/div[2]'
+                        inp_xpath_search = '//*[@id="side"]/div[1]/div/div/div[2]/div/div[2]'
                         input_box_search = WebDriverWait(driver,20).until(lambda driver: driver.find_element_by_xpath(inp_xpath_search))
                         input_box_search.send_keys(group+Keys.ENTER)
                         time.sleep(2)
