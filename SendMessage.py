@@ -41,6 +41,7 @@ def send_message(driver, filename, group_config):
                                       split_details[group_config[site_name]['site']],\
                                       split_details[group_config[site_name]['status']],\
                                       group_config[site_name]['group']
+                friendly_name = group_config[name]['friendly_name']
                 if (name and status):
                     for group in groups:
                         inp_xpath_search = '//*[@id="side"]/div[1]/div/div/div[2]/div/div[2]'
@@ -48,11 +49,11 @@ def send_message(driver, filename, group_config):
                         input_box_search.send_keys(group+Keys.ENTER)
                         time.sleep(2)
                         act_elem = driver.switch_to.active_element
-                        act_elem.send_keys(f"{name} {status}"+Keys.ENTER)
+                        act_elem.send_keys(f"{friendly_name}: {status}"+Keys.ENTER)
                 sent = True
     if sent:
         base_path = path.basename(filename)
-        shutil.move(filename,path.join(TARGET_DIR,base_path))
+        shutil.move(filename, path.join(TARGET_DIR,base_path))
 
 
 def process_missed_files(driver, group_config):

@@ -1,6 +1,6 @@
 {
-  "TestGroup": {"date": 2, "site":  0, "time": 1, "status": 3, "group": ["TestGroup","Raj madurai"]},
-  "Raj madurai": {"date": 0, "site":  1, "time": 2, "status": 3, "group": ["Raj madurai"]},
-  "site1": {"date": 1, "site":  0, "time": 2, "status": 3, "group": ["site1"]},
-  "site2": {"date": 0, "site":  1, "time": 2, "status": 3, "group": ["site2"]}
+  "TestGroup": {"date": 2, "site":  0, "time": 1, "status": 3, "friendly_name":"sitex_friendly_name","group": ["TestGroup","velu"]},
+  "Raj madurai": {"date": 0, "site":  1, "time": 2, "status": 3, "friendly_name":"sitey_friendly_name","group": ["velu"]},
+  "site1": {"date": 1, "site":  0, "time": 2, "status": 3, "friendly_name":"site1_friendly_name","group": ["site1"]},
+  "site2": {"date": 0, "site":  1, "time": 2, "status": 3, "friendly_name":"site2_friendly_name","group": ["site2"]}
 }
